@@ -27,8 +27,10 @@ class BookModel(db.Model):
 
     def update(self, data):
         """Updates a book record"""
+        ignore = ['id']
         for key, item in data.items():
-            setattr(self, key, item)
+            if key not in ignore:
+                setattr(self, key, item)
         db.session.commit()
 
     def delete(self):

@@ -26,12 +26,14 @@ def add_books():
     return jsonify(create_book(data))
 
 
-@app_routes.route('/book', methods=["PUT"])
+@app_routes.route('/book', methods=["PUT"], strict_slashes=False)
 def update_book():
+    if not request.get_json():
+        abort(400, description="Not a JSON")
     data = request.get_json()
     return jsonify(updating_book(data))
 
 
-@app_routes.route('/book/<int:id>', methods=["DELETE"])
+@app_routes.route('/book/<id>', methods=["DELETE"])
 def delete_book(id):
     return jsonify(deleting_book(id))
