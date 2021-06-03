@@ -1,0 +1,27 @@
+gets book by ID
+---
+tags:
+  - Book
+parameters:
+  - name: book_id
+    in: path
+    type: string
+    required: true
+    description: The ID of the book
+responses:
+  200:
+    description: request exected successfully
+    schema:
+      properties:
+        id:
+          type: string
+          description: The uuid of the instance
+        title:
+          type: string
+          description: Name of the book
+        author:
+          type: string
+          description: Name of the author
+        read:
+          type: boolean
+          description: True if already read, False if not

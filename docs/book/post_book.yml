@@ -1,0 +1,29 @@
+Post a book to the library
+---
+tags:
+  - Book
+parameters:
+  - name: id
+    in: body
+    required: true
+    requires:
+      - title
+      - author
+    properties:
+      id:
+        type: string
+        description: The uuid of the instance
+      title:
+        type: string
+        description: Name of the book
+      author:
+        type: string
+        description: Name of the author
+      read:
+        type: boolean
+        description: True if already read, False if not
+responses:
+  400:
+    description: Not a JSON
+  201:
+    description: request executed successfully

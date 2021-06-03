@@ -1,0 +1,11 @@
+Updates a book
+---
+tags:
+  - book
+responses:
+  404:
+    description: resource not found!
+  400:
+    description: Not a JSON
+  200:
+    description: request executed successfully
