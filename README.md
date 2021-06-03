@@ -1,5 +1,17 @@
 # Books API
 
+# Clone repo
+
+```bash
+$ git clone https://github.com/andreshugueth/books_api.git
+```
+Go to the `books_api` directory
+
+```bash
+$ cd books_api
+```
+
+
 ## Dev Setup
 
 * Postgres database setup:
